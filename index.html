@@ -34,6 +34,9 @@
   .badge { padding:2px 8px; border-radius:10px; font-size:11px; }
   .badge-green { background:#123a25; color:#4caf7d; }
   .badge-red { background:#3a1414; color:#d9705f; }
+  .badge-amber { background:#3a2c0d; color:#d4a537; }
+  .validation-row { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .validation-detail { color:#8a877c; font-size:12px; }
   .tag { padding:1px 7px; border-radius:4px; font-size:11px; }
   .tag-entry { background:#123a25; color:#4caf7d; }
   .tag-exit { background:#2a1c0d; color:#c9a227; }
@@ -46,6 +49,10 @@
   <div class="tabs"><button class="tab-btn active" onclick="showTab('pullback_v2_agg')" id="tabbtn-pullback_v2_agg">pullback_v2 (aggressive)</button><button class="tab-btn" onclick="showTab('squeeze_breakout_v2')" id="tabbtn-squeeze_breakout_v2">squeeze_breakout_v2</button><button class="tab-btn" onclick="showTab('darvas_box_v2')" id="tabbtn-darvas_box_v2">darvas_box_v2</button><button class="tab-btn" onclick="showTab('oneil_pivot_v2')" id="tabbtn-oneil_pivot_v2">oneil_pivot_v2</button><button class="tab-btn" onclick="showTab('third_watch_v4')" id="tabbtn-third_watch_v4">third_watch_v4</button><button class="tab-btn" onclick="showTab('turtle_ibit')" id="tabbtn-turtle_ibit">turtle_ibit</button></div>
   
 <div class="panel" id="panel-pullback_v2_agg" style="display:block">
+  <div class="validation-row" title="Gate1 13/15, Gate2 10/15 — edge partly RS+regime filter">
+    <span class="badge badge-amber">CONDITIONAL</span>
+    <span class="validation-detail">Gate1 13/15, Gate2 10/15 — edge partly RS+regime filter</span>
+  </div>
   <div class="kpi-row">
     <div class="kpi"><div class="kpi-label">NAV</div><div class="kpi-value">$200,000</div></div>
     <div class="kpi"><div class="kpi-label">Total P&amp;L</div>
@@ -61,6 +68,10 @@
   <div class="section"><h3>Activity Log</h3><div class="no-data">No activity yet.</div></div>
 </div>
 <div class="panel" id="panel-squeeze_breakout_v2" style="display:none">
+  <div class="validation-row" title="Gate1 12/15, Gate2 14/15 — clean entry skill, both gates">
+    <span class="badge badge-green">VALIDATED</span>
+    <span class="validation-detail">Gate1 12/15, Gate2 14/15 — clean entry skill, both gates</span>
+  </div>
   <div class="kpi-row">
     <div class="kpi"><div class="kpi-label">NAV</div><div class="kpi-value">$200,000</div></div>
     <div class="kpi"><div class="kpi-label">Total P&amp;L</div>
@@ -76,6 +87,10 @@
   <div class="section"><h3>Activity Log</h3><div class="no-data">No activity yet.</div></div>
 </div>
 <div class="panel" id="panel-darvas_box_v2" style="display:none">
+  <div class="validation-row" title="Gate1 8/15 — deployed observationally per D1">
+    <span class="badge badge-red">FAILS MATCHED-EXIT</span>
+    <span class="validation-detail">Gate1 8/15 — deployed observationally per D1</span>
+  </div>
   <div class="kpi-row">
     <div class="kpi"><div class="kpi-label">NAV</div><div class="kpi-value">$200,000</div></div>
     <div class="kpi"><div class="kpi-label">Total P&amp;L</div>
@@ -91,6 +106,10 @@
   <div class="section"><h3>Activity Log</h3><div class="no-data">No activity yet.</div></div>
 </div>
 <div class="panel" id="panel-oneil_pivot_v2" style="display:none">
+  <div class="validation-row" title="Gate1 7/15 — deployed observationally per D1">
+    <span class="badge badge-red">FAILS MATCHED-EXIT</span>
+    <span class="validation-detail">Gate1 7/15 — deployed observationally per D1</span>
+  </div>
   <div class="kpi-row">
     <div class="kpi"><div class="kpi-label">NAV</div><div class="kpi-value">$200,000</div></div>
     <div class="kpi"><div class="kpi-label">Total P&amp;L</div>
@@ -106,6 +125,10 @@
   <div class="section"><h3>Activity Log</h3><div class="no-data">No activity yet.</div></div>
 </div>
 <div class="panel" id="panel-third_watch_v4" style="display:none">
+  <div class="validation-row" title="Gate1 13/15, Gate2 9/15 — edge is mostly the squeeze filter">
+    <span class="badge badge-amber">CONDITIONAL</span>
+    <span class="validation-detail">Gate1 13/15, Gate2 9/15 — edge is mostly the squeeze filter</span>
+  </div>
   <div class="kpi-row">
     <div class="kpi"><div class="kpi-label">NAV</div><div class="kpi-value">$200,000</div></div>
     <div class="kpi"><div class="kpi-label">Total P&amp;L</div>
@@ -121,6 +144,10 @@
   <div class="section"><h3>Activity Log</h3><div class="no-data">No activity yet.</div></div>
 </div>
 <div class="panel" id="panel-turtle_ibit" style="display:none">
+  <div class="validation-row" title="n=51 below significance floor — accepted exception">
+    <span class="badge badge-amber">SCOPE-LIMITED</span>
+    <span class="validation-detail">n=51 below significance floor — accepted exception</span>
+  </div>
   <div class="kpi-row">
     <div class="kpi"><div class="kpi-label">NAV</div><div class="kpi-value">$200,000</div></div>
     <div class="kpi"><div class="kpi-label">Total P&amp;L</div>
